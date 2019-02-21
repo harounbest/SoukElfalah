@@ -1,0 +1,19 @@
+
+      <!--
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">{{ $post->title}} </h2>
+            <p class="blog-post-meta">{{\Carbon\Carbon::parse($post->created_at)->diffForHumans()}} من طرف  <a href="#">{{$post->user_id}} </a></p>
+            {{$post->excerpt }}
+            <a href ="posts/show/{{$post->id}}/{{$post->slug}}"> المزيد </a>
+            <a href ="{{route('post.show',['id'=>$post->id,'slug'=>$post->slug])}}"> المزيد </a>
+            @guest
+            @elseif (Auth::user()->isAdmin)
+            <form method="POST" action="{{ route('posts.destroy',$post->id) }}" onsubmit="return confirm('هل تريد فعلاً حذف السجل')" >
+                             {{ csrf_field() }}
+                                <input name="_method" type="hidden" value="delete">
+                                <button type="submit" class="btn-sm btn-danger" >حذف<i class="glyphicon glyphicon-remove"></i></button>
+                        </form>
+            @endguest
+            </div>
+        @endforeach -->
