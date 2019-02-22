@@ -12,7 +12,7 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create();
+      /*  $faker = Faker::create();
         for ($i = 0; $i < 5; $i++) {
             DB::table('users')->insert([
                 'name' => "user".rand(1,5),
@@ -21,6 +21,6 @@ class UserTableSeeder extends Seeder
                 'phonenumber'=>$faker->PhoneNumber,
                 
                 ]);
-        }
+        }*/
     }
 }

@@ -15,7 +15,7 @@ class PostsTableSeeder extends Seeder
         //
         //factory(app\models\Post::class,20)->create();
         //factory(app\Models\Post::class,20)->create();
-        $faker = Faker::create();
+       /* $faker = Faker::create();
        
         for ($i = 0; $i < 5; $i++) {
             $title = $faker->sentence;
@@ -30,6 +30,6 @@ class PostsTableSeeder extends Seeder
         'created_at'=>\Carbon\Carbon::createFromDate(2017,rand(1,12),rand(1,28))
 
         ]);
-    }
+    }*/
 }
 }

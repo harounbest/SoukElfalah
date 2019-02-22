@@ -17,7 +17,7 @@ class CreateWilayaTable extends Migration
             $table->tinyIncrements ('id');
             $table->string('name_ar');
             $table->string('name_fr')->nullable();
-            $table->tinyInteger('parent');
+            $table->string('parent');
         });
     }
 

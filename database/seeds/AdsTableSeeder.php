@@ -12,7 +12,7 @@ class AdsTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker=Faker::create();
+       /* $faker=Faker::create();
 
         $title = $faker->sentence;
         $slug = helper::slug($title);
@@ -251,6 +251,6 @@ class AdsTableSeeder extends Seeder
             'wilaya_id' => rand(1, 6),
             'currency_id'=> rand(1, 6),
         ]);
-
+*/
     }
 }

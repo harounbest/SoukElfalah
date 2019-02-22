@@ -11,7 +11,7 @@ class ImageTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('images')->insert([
+      /*  DB::table('images')->insert([
             'ad_id'      => 1,
             'image'      => "pexels-photo-1148955.jpeg",
         ]);
@@ -140,6 +140,6 @@ class ImageTableSeeder extends Seeder
             'ad_id'      => 17,
             'image'       => "beer-machine-alcohol-brewery-159291.jpeg",
         ]);
-
+*/
     }
 }
