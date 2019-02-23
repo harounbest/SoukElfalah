@@ -18,7 +18,7 @@ class AdsController extends Controller
 
     public function __construct(AdsInterface $ads,FavoriteInterface $favorite)
     {
-        $this->middleware('admin', ['only' => ['create', 'store', 'edit', 'delete']]);
+        $this->middleware('auth', ['only' => ['create', 'store', 'edit', 'delete']]);
 
         $this->ads=$ads;
 

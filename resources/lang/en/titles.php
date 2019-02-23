@@ -11,6 +11,7 @@ return [
     'Explore'         =>'Explore',
     'blog'            =>'Blog',
     'Archives'       =>'Archives',
-    'AddArticle'=>  'Add Articles'
+    'AddArticle'=>  'Add Articles',
+    'Email_Header'=>'This email is from www.soukelfalah.com'
 ];
     

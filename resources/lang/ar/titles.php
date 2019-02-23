@@ -13,6 +13,7 @@ return [
     'dashboard'  => 'لوحة التحكم',
     'cancel'=> ' إلغاء',
     'Archives'       =>'الأرشيف',
-    'AddArticle'     =>'أضف مقالة'
+    'AddArticle'     =>'أضف مقالة',
+    'Email_Header'     =>' هذا الايميل من موقع سوق الفلاح www.soukelfalah.com',
 ];
     

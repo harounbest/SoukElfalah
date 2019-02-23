@@ -22,7 +22,8 @@
            <!--btn icon-btn btn-dark-->
                 <a class=" btn btn-primary" href="{{route('ad.create')}}">
                 <span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>
-                    أضف إعلان جديد
+                      {{__('titles.addAd_title')}}
+                    
                 </a>
          
             <li class="nav-item nav-link dropdown">
@@ -33,7 +34,7 @@
                 <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/userAds">إعلاناتي</a>
                     <a class="dropdown-item" href="/userFav">تفضيلاتي</a>
-                
+              
                     @if (Auth::user()->isAdmin)
                     <a class="dropdown-item" href="{{route('posts.create')}}">{{__('titles.AddArticle')}}</a>
                     <a class="dropdown-item" href="/dashBoard">{{__('titles.dashboard')}}</a>
