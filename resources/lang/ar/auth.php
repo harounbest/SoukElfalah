@@ -28,7 +28,8 @@ return [
     'ConfirmPassword' => 'تأكيد كلمة المرور',
     'RegisterNow'     =>'سجل الآن',
     'AddProduct'     =>'أضف منتجك الآن ',
-    'PhoneNumber'     => 'الهاتف'   
-    
+    'PhoneNumber'     => 'الهاتف' ,  
+    'Reset Password'=> '  إعادة تعيين كلمة المرور' , 
+    'Send Password Reset Link'=>'إرسال رابط إعادة تعيين كلمة المرور'
     
 ];

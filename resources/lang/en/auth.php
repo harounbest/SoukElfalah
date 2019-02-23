@@ -19,6 +19,8 @@ return [
     'Register' => 'Register',
     'RegisterNow' =>'Register Now',
     'AddProduct'     =>' Add your product Now',
-    'PhoneNumber'=>'Phone Number'
-
+    'PhoneNumber'=>'Phone Number',
+    'Reset Password'=> 'Reset Password  ' ,  
+    'E-Mail Address'  => 'E-Mail Address  ',
+    'Send Password Reset Link'=>'Send Password Reset Link'
 ];
