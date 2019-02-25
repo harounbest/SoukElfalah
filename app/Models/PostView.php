@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class PostView extends Model
 {
     //
-    protected $table = 'Post_views';
+    protected $table = 'post_views';
     protected $guarded = ['id'];
 }

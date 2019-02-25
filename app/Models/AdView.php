@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class AdView extends Model
 {
     //
-    protected $table = 'Ad_views';
+    protected $table = 'ad_views';
     protected $guarded = ['id'];
 }
