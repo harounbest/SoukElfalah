@@ -8,7 +8,7 @@ use App\Models\postImage;
 trait postImageUploadTrait
 {
 
-    protected $path  = "public/images/posts";
+    protected $path  = "app/public/images/posts";
 
     protected $thumb_path  = "app/public/images/posts/thumbs";
 
