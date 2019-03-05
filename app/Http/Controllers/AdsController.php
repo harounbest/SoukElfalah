@@ -75,7 +75,7 @@ class AdsController extends Controller
     {  
         $ads = $this->ads->store($request); /** using  the repository  */
 
-        return back()->with('success','تم إضافة الإعلان');
+        return back()->with('success',' تم إضافة الإعلان في إنتظار المراجعة من طرف إدارة الموقع');
     }
 
     /**
