@@ -23,7 +23,7 @@ class AdsRepository implements AdsInterface
     {
   
         //$ads = \Cache::remember('ads','1440', function() {
-            return $this->ads::with('images')->select('*')
+            return $this->ads::with('images')->select('*')->where('is_published','=','1')
            ->withCount('favorite')->withCount('Adview')
            ->with('wilaya')
            ->with('currency')
@@ -36,7 +36,7 @@ class AdsRepository implements AdsInterface
     {
 
         //$ads = \Cache::remember('ads','1440', function() {
-            return $this->ads::with('images')->select('*') 
+            return $this->ads::with('images')->select('*')->where('is_published','=','1') 
             ->orderBy('updated_at', 'DESC')
             ->withCount('favorite')
             ->withCount('Adview')
@@ -51,7 +51,7 @@ class AdsRepository implements AdsInterface
     public function mostviewed()
     {
         //$ads = \Cache::remember('ads','1440', function() {
-            return $this->ads::with('images')->select('*')->whereIn('id',
+            return $this->ads::with('images')->select('*')->where('is_published','=','1')->whereIn('id',
             AdView::select('ad_id')
             ->groupBy('ad_id')
             ->get())
@@ -69,7 +69,7 @@ class AdsRepository implements AdsInterface
     public function mostfavorited()
     {
         //$ads = \Cache::remember('ads','1440', function() {
-            return $this->ads::with('images')->select('*')->whereIn('id',
+            return $this->ads::with('images')->select('*')->where('is_published','=','1')->whereIn('id',
                 Favorite::select('ad_id')
                     ->groupBy('ad_id')
                     ->orderByRaw('COUNT(*) DESC')
@@ -84,6 +84,21 @@ class AdsRepository implements AdsInterface
        // });
 
         //return $ads;
+    }
+    public function getUnpublished(){
+        return $this->ads::with('images')->select('*')->where('is_published','=','0') 
+        ->orderBy('updated_at', 'DESC')
+        ->with('wilaya')
+        ->with('currency')
+        ->paginate(32);
+    }
+    public function publish($request)
+    {
+        $ad = $this->ads->find($request->id);
+        $ad->is_published = 1;
+        $ad->save();
+        //$l= $this->ads->findOrFail($request->id)->update(['is_published' => 1]);
+        //return dd($ad->is_published ); 
     }
 
     public function store($request)

@@ -38,7 +38,9 @@
                     @if (Auth::user()->isAdmin)
                     <a class="dropdown-item" href="{{route('posts.create')}}">{{__('titles.AddArticle')}}</a>
                     <a class="dropdown-item" href="/dashBoard">{{__('titles.dashboard')}}</a>
-                    @endif
+                    <a class="dropdown-item" href="/unpublished">{{__('titles.unpublished')}}</a>
+                    
+                     @endif
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();

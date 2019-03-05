@@ -132,6 +132,20 @@ class AdsController extends Controller
 
         return back()->with('success','تم تعديل الإعلان');
     }
+    public function publishAds(Request $request)
+    {     
+     $this->ads->publish( $request); 
+       // return dd($request->id);  
+        return back()->with('success','تم نشر الإعلان');
+       
+        //return back()->with('error','لم يتم  نشر الإعلان');
+    }
+    
+    public function getUnpublishedAds()
+    {
+        $unpublishedAds = $this->ads->getUnpublished();
+        return view('ads.unpublished',compact('unpublishedAds'));
+    }
 
     public function getUserAds()
     {

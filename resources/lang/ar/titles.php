@@ -15,5 +15,6 @@ return [
     'Archives'       =>'الأرشيف',
     'AddArticle'     =>'أضف مقالة',
     'Email_Header'     =>' هذا الايميل من موقع سوق الفلاح www.soukelfalah.com',
+    'unpublished' =>'إعلانات في إنتظار النشر',
 ];
     

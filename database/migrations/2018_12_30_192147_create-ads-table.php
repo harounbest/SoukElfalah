@@ -22,6 +22,7 @@ class CreateAdsTable extends Migration
             $table->integer('user_id')->unsigned()->nullable();
             $table->tinyInteger('category_id')->unsigned();
             $table->tinyInteger('wilaya_id')->unsigned();
+            $table->tinyInteger('is_published')->default(0);
             $table->tinyInteger('currency_id')->unsigned();
             $table->timestamps();
         });

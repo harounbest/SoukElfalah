@@ -26,7 +26,7 @@ class PostRequest extends FormRequest
         return [
             'title' => 'required|max:50', 
             'body' => 'required',
-            'images' => 'mimes:jpeg,bmp,png'             
+            'images.*' => 'mimes:jpeg,bmp,png,jpg'             
        ];
     }
     public function messages() 

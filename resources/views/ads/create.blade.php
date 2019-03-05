@@ -8,7 +8,7 @@
 
     @include('alerts.error')
 
-    <form method="POST" action="{{ route('ad.store') }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('ad.store') }}" enctype="multipart/form-data"> 
        {{ csrf_field() }}
        <div class="form-group">
             <label for="wilaya">حدد الولاية</label>

@@ -21,7 +21,8 @@ Route::get('home', 'AdsController@index')->name('home');
 Route::get('userAds','AdsController@getUserAds')->middleware('auth');
 Route::get('dashBoard','AdminController@index')->middleware('admin');
 
-
+Route::get('unpublished','AdsController@getUnpublishedAds')->middleware('admin');
+Route::post('publish{id}','AdsController@publishAds')->name('publish')->middleware('admin');
 //Route::get('ads/destroyadmin', 'AdsController@destroyadmin');
 
 Route::resource('ads', 'AdsController')->only([

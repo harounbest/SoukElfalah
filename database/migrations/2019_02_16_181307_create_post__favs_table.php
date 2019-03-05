@@ -13,7 +13,7 @@ class CreatePostFavsTable extends Migration
      */
     public function up()
     {
-        Schema::create('post_Favs', function (Blueprint $table) {
+        Schema::create('post_favs', function (Blueprint $table) {
             $table->integer('user_id')->unsigned();
             $table->integer('post_id')->unsigned();
             $table->timestamps();

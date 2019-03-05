@@ -25,6 +25,8 @@ interface AdsInterface
     public function search($request) ;
 
     public function getCommonAds();
+    public function getUnpublished();
+    public function publish($request);
 }
 
 ?>
