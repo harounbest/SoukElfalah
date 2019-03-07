@@ -8,8 +8,8 @@
     <meta name="author" content="">
     <link rel="icon" href="{{ asset('vendor/icon/favicon.ico')}}" />
 
-     <title> @yield('title',config('app.name', 'Laravel'))</title>
-     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/blog/">
+     <title> @yield('title',config('app.name', 'Laravel'))</title> 
+    <!--  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/blog/">-->
      <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Bootstrap core CSS -->
     <link href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">

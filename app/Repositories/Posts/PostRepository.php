@@ -41,9 +41,9 @@ class PostRepository implements PostInterface
         {
            $img_name=$this->saveImages($img);
 
-           $image=new Image();
-           $image->image = $img_name;
-           $ad->images()->save($image);
+           $postimage=new postImage();
+           $postimage->image = $img_name;
+           $post->postImages()->save($postimage);
         }
     }
 
