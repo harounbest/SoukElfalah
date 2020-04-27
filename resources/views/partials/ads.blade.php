@@ -8,7 +8,10 @@
         @endphp
         <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="card mb-5 text-center" href="/ad/{{$ad->id}}/{{$ad->slug}}">
-                <img class="card-img-top thumbnail" src="{{$img_name? '/storage/images/thumbs/'.$img_name : '/storage/images/thumbs/default.png'}}"  alt="{{$img_name}}">
+            <a href="/ad/{{$ad->id}}/{{$ad->slug}}">   
+            <img  class="card-img-top thumbnail" src="{{$img_name? '/storage/images/thumbs/'.$img_name : '/storage/images/thumbs/default.png'}}"  alt="{{$img_name}}">
+            </a>
+            
                 <div class="card-body">
                     <div><h6 class="card-title">{{$ad->title}}</h6></div>
                     <p class="card-text"><i class="far fa-money-bill-alt" style="color:#85bb65"></i>{{$ad->price}} {{$ad->currency->symbol}}</p>

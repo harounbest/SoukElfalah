@@ -9,7 +9,7 @@ return [
     'srch_title'      => 'نتائج البحث عن إعلان',
     'adDetail_title'  => 'تفاصيل اللإعلان',    
     'explore'         =>'السوق',
-    'blog'            => 'المدونة',
+    'blog'            => 'المجلة',
     'dashboard'  => 'لوحة التحكم',
     'cancel'=> ' إلغاء',
     'Archives'       =>'الأرشيف',

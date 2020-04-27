@@ -18,7 +18,9 @@
                 @foreach($post->postImages as $img)
                     <?php $i++;?>
                     <div class="carousel-item{{$i<=1?' active':''}} " >
+                    <a href ="{{route('post.show',['id'=>$post->id,'slug'=>$post->slug])}}">  
                         <img   src="{{asset('/storage/images/posts/'.$img->image)}}" >
+                        </a>
                     </div>
                 @endforeach
             </div>
@@ -26,7 +28,9 @@
             <div class="carousel-indicators">
                <?php $i=0; ?>
                 @foreach($post->postImages as $img)
+                <a href ="{{route('post.show',['id'=>$post->id,'slug'=>$post->slug])}}">  
                 <img alt="thumbnail"  class="img-thumbnail"  src="{{asset('/storage/images/posts/thumbs/'.$img->image)}}" data-target="#carouselIndicators" data-slide-to="{{$i++}}">
+                </a>
                 @endforeach
             </div>
         </div>

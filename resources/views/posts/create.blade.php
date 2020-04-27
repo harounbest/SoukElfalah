@@ -9,16 +9,16 @@
 
     @include('alerts.error')
 
-    <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data">
+    <form method="POST"  action="{{ route('posts.store') }}" enctype="multipart/form-data">
        {{ csrf_field() }}
       
         <div class="form-group">
             <label for="title">عنوان المقال:</label>
-            <input type="text" class="form-control" name="title" value="{{old('title')}}">
+            <input type="text" class="form-control" name="title" value="{{old('title')}}" >
         </div>
-        <div class="form-group">
-            <label for="body"> المقال: </label>
-            <textarea class="form-control" name="body" rows="20" >{{old('text')}}</textarea>
+        <div  class="form-group">
+            <label for="body" name="body"> المقال: </label>
+           <textarea class="form-control" name="body" rows="20" >{{old('text')}}</textarea> 
         </div>
         <div class="form-group">
             <label for="body"> المختصر: </label>
@@ -37,5 +37,11 @@
         <a class="btn-sm btn-danger"  href="{{ route('posts.home') }}">{{__('titles.cancel')}}</a>
     </form>
 </div>
-
+<script type="text/javascript">
+      $('#postCreation').summernote({
+        placeholder: '{{old('text')}}',
+        tabsize: 2,
+        height: 500
+      });
+    </script>
 @endsection

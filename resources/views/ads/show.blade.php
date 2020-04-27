@@ -148,7 +148,8 @@
 <script>
     $(document).ready(function(){
 
-        $('#sendEmail').on('click', function(event){
+        $('#sendEmail').on('click', function(event)
+        {
             event.preventDefault();
             $.ajax({
                 headers: {
@@ -177,7 +178,8 @@
             });
         });
 
-        $('#fav').on('click', function(){
+        $('#fav').on('click', function()
+        {
 
             var ad_id = $(this).data('id');
             ad = $(this);

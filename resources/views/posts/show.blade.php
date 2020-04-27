@@ -39,7 +39,7 @@
 
 </h2>
         
-        <p>{{$post->body}} </p>
+        <p>{!!html_entity_decode($post->body)!!}</p>
         <div>  
         <i class="far fa-heart" style="color:red">{{$post->postfav_count}}</i>   
         <i class="fas fa-eye" style="color:#85bb65">   {{$post->post_view_count}} </i>  
